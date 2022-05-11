@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+//Imports: Components
+import Title from './components/Title.js'
+import Map from './components/Map.js'
+import Nav from './components/Nav.js'
+import Info from './components/Info.js'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='body-text' class='flex font-Roboto'>
+      <div class='w-full'>
+        <Title />
+        <div class='-z-10 max-h-full	'>
+          {' '}
+          <Map />
+        </div>
+      </div>
+      <Nav />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
+/// This below needs to be a popup when map is interacted with
+// <div className={styles.info}>
+// <Info />
+// </div>
